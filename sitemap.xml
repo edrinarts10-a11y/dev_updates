@@ -1,0 +1,77 @@
+Here’s how to *create and submit a sitemap* for your GitHub Pages site:
+
+---
+
+✅ Step 1: Create a Sitemap
+
+Create a file named `sitemap.xml` in your repo (same place as `index.html`) with this basic format:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://edrinarts10-a11y.github.io/dev_updates/</loc>
+    <lastmod>2025-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
+```
+
+Update the `<lastmod>` date if you make changes.
+
+---
+
+✅ Step 2: Add a Reference in `robots.txt`
+
+Create a file called `robots.txt` and include this line:
+
+```
+Sitemap: https://edrinarts10-a11y.github.io/dev_updates/sitemap.xml
+```
+
+---
+
+✅ Step 3: Submit to Google
+
+1. Go to [Google Search Console](https://search.google.com/search-console/)
+2. Choose your site
+3. Go to *"Sitemaps"* on the left menu
+4. Enter: `sitemap.xml`
+5. Click *Submit*
+
+---
+
+Let me know if you want help generating it automatically.
+Yes, the sitemap code I gave earlier was complete if you're using a *basic static site*. Here's a simple example of what your `sitemap.xml` should look like:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://yourusername.github.io/</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://yourusername.github.io/blog.html</loc>
+    <lastmod>2025-08-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+</urlset>
+```
+
+Just replace the links with your actual URLs and update the date if needed. Save it as `sitemap.xml` and upload it to your GitHub repo root (same level as your index.html).
+
+Then add the `robots.txt` file like this:
+
+```txt
+User-agent: *
+Allow: /
+Sitemap: https://yourusername.github.io/sitemap.xml
+```
+
+Let me know if you want me to adjust it using your actual domain or file paths.
