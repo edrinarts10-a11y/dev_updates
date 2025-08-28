@@ -37,6 +37,30 @@
   display: none;
 }
 
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 6px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
