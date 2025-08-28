@@ -56,3 +56,20 @@ window.onload = function() {
     document.getElementById("cookieConsent").style.display = "block";
   }
 };
+
+document.getElementById('searchButton').addEventListener('click', function() {
+    let searchQuery = document.getElementById('searchInput').value.toLowerCase();
+    let articles = document.querySelectorAll('.blog-container');
+
+    articles.forEach(function(article) {
+        let title = article.querySelector('.title').innerText.toLowerCase();
+        let content = article.querySelector('p').innerText.toLowerCase();
+        let tags = Array.from(article.querySelectorAll('.tags span')).map(tag => tag.innerText.toLowerCase()).join(' ');
+
+        if (title.includes(searchQuery) || content.includes(searchQuery) || tags.includes(searchQuery)) {
+            article.parentElement.style.display = 'block';
+        } else {
+            article.parentElement.style.display = 'none';
+        }
+    });
+});
